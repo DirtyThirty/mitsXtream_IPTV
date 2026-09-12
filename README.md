@@ -195,4 +195,4 @@ For each release, the published SHA-256 hash can be used to verify that the APK 
 
 ## Verify the APK and compare the result with the published release hash.
 SHA-256: 
-fb542fd7727eb5899b397992be3287d86bec5a22695ff0b7fbdd0d77fa8c09ea
+f8bfe77c7bc613e26f2f5f989047eea6f32d2f105d39eb4369ccefac9b3ae8fa
