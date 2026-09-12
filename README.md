@@ -1,67 +1,198 @@
 <img width="1280" height="640" alt="mitsxtream-banner" src="https://github.com/user-attachments/assets/8ac2020c-f8dc-40c0-b6b5-d53220bd40e1" />
 
-MitsXtream
+# MitsXtream
 
 An IPTV player for Android that treats several Xtream Codes subscriptions as one catalogue.
 
-One APK. It works out at startup whether it is running on a television or a phone and lays itself out accordingly — a focus-driven interface for a remote, a touch interface for a thumb. Nothing to choose, nothing to configure.
+**One APK. One catalogue. Multiple providers.**
+
+MitsXtream detects at startup whether it is running on a television or a phone and adapts its interface accordingly — a focus-driven interface for a remote, and a touch interface for a phone.
 
 MitsXtream contains no channels, films or series, and no subscription of any kind. It arrives empty. You supply your own lawful service.
 
-What it does
+## What it does
 
-Several subscriptions, one catalogue. Add as many Xtream accounts as you like. Films, series and channels from all of them are merged into a single set of sections. Search once and see results from every provider together. When you press play, the app works out which subscription owns that title and signs the request with the right credentials — there is no account to switch to.
+### Several subscriptions, one catalogue
 
-It keeps your place. Positions are saved as you watch. Continue Watching shows one card per title with the episode you were last on, and a series stays in the row until every season is finished, not until one episode ends.
+Add as many Xtream Codes accounts as you like.
 
-Episodes roll on. Thirty seconds before an episode ends, a card offers the next one and counts down. Thirty rather than ten, because most episodes run closing titles over that last half minute and you should have time to decide. Any button waves it away.
+Films, series and live channels from all your providers are combined into one catalogue. Search and browse across them without having to switch between accounts.
 
-One saved list. A heart on any film or series. The list stores the title and artwork itself, so an entry survives its provider going offline.
+When you play something, MitsXtream knows which provider owns the item and uses the corresponding account.
 
-Search that answers as you type. A full-text index of the local copy of your catalogue, so results appear per keystroke without asking any provider anything. Two modes: titles, or the category names themselves — useful when you want to know what a subscription actually carries.
+### It keeps your place
 
-Categories that scale. A provider can file forty thousand films under a dozen headings. Sections are grids with a category filter rather than rows, because a row would only ever show the first twenty.
+Playback positions are stored locally.
 
-It works from its own copy. The catalogue is cached in a local database. Opening a section reads from disk, not from the network, so browsing is instant after the first sync. A provider that is slow or down degrades that provider only — the rest of the catalogue is still there, and the app says which one is missing rather than quietly showing you less.
+**Continue Watching** brings your unfinished titles back to the home screen, including series progress so you can return to the episode you were watching.
 
-On a television
+### Automatic next episode
 
-Built for a remote from the first line, not adapted to one.
+For supported series playback, MitsXtream can offer the next episode near the end of the current one and continue playback without requiring you to return to the series screen.
 
-Left rail with every section; the focus ring is large and obvious from across the room, and everything unfocused steps back so it can be found instantly
-Category filter that collapses to a strip once you have chosen, so the posters keep the screen
-Player driven by the D-pad: left and right move through the film, down moves to the buttons, up returns to the timeline, and the overlay returns to the timeline whenever it fades
-On-screen keyboard for search with a Greek and Latin toggle
-Text fields hand over to Android's own keyboard on OK and hand back on Done, so filling in a form is one pass down the screen
-On a phone
-Bottom navigation bar, top bar for search and settings
-Your own keyboard everywhere, including search
-Player by touch: tap for the controls, double tap either side to skip ten seconds — tap again to keep skipping — drag the bar to scrub
-Landscape and fullscreen while playing, restored on the way out
-Posters and grids measured from the screen rather than assumed
-Your details stay on the device
+### One saved list
 
-Passwords are stored in the operating system keystore, not in the app's database. Nothing is sent anywhere except to the provider you configure. No tracking, no analytics, no account, no server of ours in the middle — there is no server of ours at all.
+Add films, series or channels to **My List** with the heart button.
 
-Requirements
-Android 9 or newer
-Android TV, Google TV, Fire TV, or an Android phone
-Your own Xtream Codes subscription
-Install
+Favorites are stored locally, including the title and artwork information needed to keep the entry useful even if a provider later becomes unavailable.
 
-Download the APK from the latest release and open it on the device. The system will ask permission to install from outside the Play Store.
+### Search as you type
 
-On a television, the usual route is the Downloader app: type the address above and press Go.
+MitsXtream maintains a local full-text search index of the catalogue.
 
-Each release lists the SHA-256 of its APK, if you want to check that the file you downloaded is the file that was published.
+Search results are therefore produced from the catalogue already stored on the device instead of making a request to every provider for every keystroke.
 
-Terms of use
-This is a player, nothing more. MitsXtream contains no channels, films or series, and no subscription of any kind. It arrives empty.
-You bring your own service. You must have your own lawful subscription and enter its details yourself. The app connects only to the server you type in.
-What you watch is your responsibility. You alone are responsible for the service you connect to, for the content you access through it, and for obeying the laws where you live.
-No affiliation. This app is not connected with, endorsed by, or acting for any IPTV provider, nor for Xtream Codes.
-No warranty. It is given as it is, free, with no guarantee. It may stop working at any moment. Picture quality depends entirely on your provider and your connection.
-No liability. As far as the law allows, the author is not liable for any loss, damage or legal consequence arising from your use of this app.
-A hobby project. Free and non-commercial. If you do not agree with all of the above, do not use the app.
+Search can be used for titles as well as category names.
 
-The same terms are shown inside the app, and must be accepted before it will open.
+### Categories and filtering
+
+Large catalogues are handled locally with category filtering and sorting rather than relying on a provider's presentation.
+
+This makes large libraries easier to browse even when a provider has thousands of titles.
+
+### Local catalogue
+
+The catalogue is cached in a local database.
+
+Once a provider has synchronized, browsing the stored catalogue does not require a network request for every screen.
+
+If one provider fails to respond, the other providers can remain available.
+
+MitsXtream also reports provider/synchronization failures instead of silently hiding the problem.
+
+### What's New
+
+MitsXtream keeps track of catalogue changes between synchronizations and provides a **What's New** view for recently added content.
+
+This includes newly detected movies and channels from your providers.
+
+### Greek-first content
+
+MitsXtream includes a Greek-first option for content discovery, allowing Greek content to be prioritized where applicable.
+
+This is useful for providers whose catalogue contains a mixture of Greek and international content.
+
+---
+
+# On a television
+
+MitsXtream is designed for remote control and D-pad navigation rather than treating a TV as a large phone.
+
+* Focus-based navigation throughout the interface
+* TV-oriented catalogue browsing
+* Category filtering
+* D-pad-friendly playback controls
+* On-screen search keyboard
+* Greek/Latin keyboard switching
+* Android's own keyboard can be used for text input where appropriate
+* Poster and grid sizing adapts to the available screen
+
+The player supports D-pad navigation for playback controls, including timeline navigation and seeking.
+
+---
+
+# On a phone
+
+The phone interface is touch-oriented.
+
+* Bottom navigation
+* Search and application controls
+* Touch-based catalogue browsing
+* Touch playback controls
+* Ten-second seeking
+* Landscape playback
+* Fullscreen playback
+* Screen-aware poster and grid sizing
+* Your normal Android keyboard for text input
+
+---
+
+# Your details stay on the device
+
+Account passwords are stored using the Android operating-system keystore rather than being stored as plain text in the application database.
+
+MitsXtream does not operate its own backend server.
+
+The application connects to the provider/server that **you configure yourself**.
+
+There is:
+
+* No MitsXtream account
+* No MitsXtream backend
+* No tracking
+* No analytics service
+* No central IPTV server
+* No bundled IPTV content
+
+Your provider credentials are used only for the provider you configure.
+
+---
+
+# Requirements
+
+* Android 9 or newer
+* Android TV / Google TV compatible Android devices
+* Android phones
+* Your own Xtream Codes-compatible subscription
+
+MitsXtream does not provide a subscription.
+
+---
+
+# Install
+
+Download the APK from the latest GitHub release and open it on your Android device.
+
+Android may ask you to allow installation from outside the Play Store.
+
+On a television, one common method is to use an app such as Downloader and enter the APK download address.
+
+---
+
+# Terms of use
+
+MitsXtream is a player, nothing more.
+
+MitsXtream contains no channels, films or series, and no subscription of any kind. It arrives empty. You bring your own service.
+
+You must have your own lawful subscription and enter its details yourself.
+
+The app connects to the server you configure. What you watch is your responsibility.
+
+You alone are responsible for:
+
+* the service you connect to;
+* the content you access through it;
+* your subscription and credentials;
+* complying with the laws applicable to you.
+
+## No affiliation
+
+MitsXtream is not connected with, endorsed by, sponsored by, or acting on behalf of any IPTV provider or Xtream Codes.
+
+## No warranty
+
+MitsXtream is provided as-is and free of charge, without any guarantee.
+
+It may stop working at any time.
+
+Picture and stream quality depend entirely on your provider, the source stream and your network connection.
+
+## No liability
+
+To the extent permitted by applicable law, the author is not liable for any loss, damage, interruption or legal consequence arising from the use of MitsXtream or from any third-party service accessed through it.
+
+## Hobby project
+
+MitsXtream is a free, non-commercial hobby project.
+
+If you do not agree with these terms, do not use the application.
+
+The same terms are presented inside the application and must be accepted before the application can be used.
+
+***********
+For each release, the published SHA-256 hash can be used to verify that the APK you downloaded matches the published file.
+
+## Verify the APK and compare the result with the published release hash.
+SHA-256: 
+fb542fd7727eb5899b397992be3287d86bec5a22695ff0b7fbdd0d77fa8c09ea
